@@ -1,0 +1,16 @@
+const fs = require("fs");
+
+const input = fs.readFileSync(0).toString().trim();
+
+const words = ["apple", "banana", "grape", "blueberry", "orange"];
+
+let count = 0;
+
+for (let i = 0; i < words.length; i++) {
+    if (words[i][2] === input || words[i][3] === input) {
+        console.log(words[i]);
+        count++;
+    }
+}
+
+console.log(count);
